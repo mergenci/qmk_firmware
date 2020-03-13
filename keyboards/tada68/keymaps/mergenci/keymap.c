@@ -4,10 +4,10 @@
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
-#define _BL 0
-#define _FL 1
-#define _CL 2
-#define _AL 3
+#define _BL 0 // Base layer
+#define _FL 1 // Function layer
+#define _CL 2 // CTRL layer
+#define _AL 3 // ALT layer
 #define _CX 4 // Emacs C-X layer
 
 enum custom_keycodes {
