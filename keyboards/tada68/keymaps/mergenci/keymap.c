@@ -29,7 +29,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
   switch (keycode) {
   case LT(_CL, KC_ESC):
-    if (!record->event.pressed && (is_emacs_cx_layer_on || is_emacs_m_layer_on)) {  // On caps lock key up when one of Emacs C-X or M- layers is on
+  case LT(_CL, KC_SPC):
+    // On caps lock or space key up when one of Emacs C-X or M- layers is on
+    if (!record->event.pressed && (is_emacs_cx_layer_on || is_emacs_m_layer_on)) {
       clear_mods();
       clear_oneshot_mods();
       return true;
